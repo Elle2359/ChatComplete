@@ -1,0 +1,73 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    title Homepage MeChat
+    |     
+    link(rel='stylesheet', href='./home.css',crossorigin='anonymous')
+    
+  body
+  
+    .container
+
+      .chat-sidebar
+        #groupnames-container.groupnames-container
+          h3  Chat Groups
+          |                     
+          ul#groups-list
+            
+              
+          |                     
+          button#open1 New Group
+          |                     
+          #container1.popup-container
+            .popup
+              button#close1.button x
+              |                             
+              h3 Enter Group Details
+              |                             
+              form(onsubmit='createGroup(event)')
+                label(for='groupname')
+                |                                 
+                input#groupname-input(type='text', name='groupname', placeholder='Group Name...')
+                br
+                |                                 
+                button.group-btn(type='submit') CreateGroup
+      | 
+      .chat-container            
+        button#logout Logout
+        |        
+        .header
+          .logo  WEChat
+          |               
+          .subtext Connecting people
+        |             
+        #chat-box.chat-box
+          ul#user
+          |                 
+          ul#message
+        |             
+        #input-area.input-area
+          form#msg-form(onsubmit='sendmessage(event)')
+            label(for='message')
+            |                     
+            input#text-content(type='text', name='message', placeholder='Type a message...', required='')
+            |                     
+            button#send-msg.fas.fa-paper-plane(type='submit') Send
+        h2.title Messages
+        hr
+        
+        #message-container.list-group 
+        h2.title Members
+        hr
+        #group-container.list-group1
+        
+     
+      script(src='./homepage.js')
+      |     
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js', integrity='sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==', crossorigin='anonymous', referrerpolicy='no-referrer')

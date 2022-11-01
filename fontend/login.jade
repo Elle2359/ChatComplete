@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Login
+    link(rel='stylesheet', href='./login.css')
+  body
+    .popup-container
+      .popup-message
+        //
+          <p>Signup Successful</p>
+          <p>Please go to Login Page to login to your account.</p>
+    .main-container
+     .form-container
+       form(action='')
+         label(for='chk', aria-hidden='true') Login
+         input#email(type='email', name='email', placeholder='Email')
+         input#password(type='password', name='password', placeholder='Password')
+         button#loginBtn(type='submit') Login
+        p
+         | Create a new account. 
+         a(href='./signup') Sign Up
+        p
+         | Forgot Password ?
+         a(href='./forgotpassword') Reset
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js')
+    script(src='./login.js')

@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css', integrity='sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M', crossorigin='anonymous')
+    link(rel='stylesheet', href='admin.css')
+    title Admin
+  body
+    .popup-container
+      .popup-message
+        //
+          <p>Signup Successful</p>
+          <p>Please go to Login Page to login to your account.</p>
+    header#main-header.text-white.p-4.mb-3
+      button#btn &#x2630;
+      nav#nav
+        ul
+          li
+            a(href='./home') Home
+          li
+            button#logout Logout
+      .container
+        .row
+          .col-md-6
+            h1#header-title Group Chat App
+    .container
+      #main.card.card-body
+        h2.title Admin Controls
+        form#addForm.form-inline.mb-3
+          input#add(type='email', placeholder='Enter email to add member')
+         
+          button#add-btn.submit-btn Add Member
+          hr
+          input#remove(type='email', placeholder='Enter email to remove member')
+        
+          button#remove-btn.submit-btn Remove Member
+          hr
+          input#add-admin(type='email', placeholder='Enter member email to make admin')
+         
+          button#admin-btn.submit-btn Make admin
+          hr
+          input#remove-admin(type='email', placeholder='Enter member email to remove admin')
+         
+          button#remove-admin-btn.submit-btn Remove admin
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js')
+    script(src='admin.js', charset='utf-8')
